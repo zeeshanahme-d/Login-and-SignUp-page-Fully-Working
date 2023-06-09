@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login data match in SignUp data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/Philosopher-Regular.ttf">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="indexPage" class="indexPage hidden">
+            <p>Congratulation You Login A Successfully;</p>
+            <p>WelCome TO Our Websit:</p>
+            <button onclick="logout()" class="Btn">LogOut</button>
+            <div>
+            </div>
+        </div>
+        <div class="btns">
+            <button id="btns1" onclick="showLoginPage()" class="Btn my-btn ">Login</button>
+            <button id="btns2" onclick="showSignUpPage()" class="Btn my-btn">SignUP</button>
+        </div>
+        <div id="loginPage" class="login-box hidden">
+            <img onclick="goback()" class="backimg" src="images/back.png" width="20" title="Back">
+            <div class="login-box-content">
+                <div class="box-text p">
+                    <p>Login Here;</p>
+                </div>
+                <div class="email-box">
+                    <label>Email: </label>
+                    <input id="loginEmail" type="email" placeholder="Enter Your Email Address;">
+                </div>
+                <div class="pas-box">
+                    <label>Password: </label>
+                    <input id="loginPass" type="password" placeholder="Enter Your Password;">
+                </div>
+                <div class="loginbtn">
+                    <button id="loginBtn" class="Btn">Login</button>
+                </div>
+                <div class="loginbtn">
+                    <button class="Btn">Forgotten password?</button>
+                </div>
+                <div class="loginbtn">
+                    <button onclick="showSignUpPage()" class="Btn">Create New Account?</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="signupPage" class="signup-box hidden">
+            <img onclick="goback()" class="backimg" src="images/back.png" width="20" title="Back">
+            <div class="login-box-content">
+                <div class="box-text p">
+                    <p>SignUP Here;</p>
+                </div>
+                <div class="email-box name">
+                    <label> Email: </label>
+                    <input id="signupEmail" type="text" placeholder="Enter Your Full Name;">
+                </div>
+                <div class="pas-box">
+                    <label>Password:</label>
+                    <input id="signPass" type="password" placeholder="Enter Your Password;">
+                    <p id="error-text"></p>
+                </div>
+                <div class="loginbtn">
+                    <button id="signupBtn" class="Btn">SignUP</button>
+                </div>
+                <div class="loginbtn">
+                    <button onclick="showLoginPage()" class="Btn">If You Already have an Account ?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
